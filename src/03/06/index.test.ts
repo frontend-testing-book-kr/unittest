@@ -1,5 +1,5 @@
-describe("真偽値の検証", () => {
-  test("「真の値」の検証", () => {
+describe("진릿값 검증", () => {
+  test("참인 진릿값 검증", () => {
     expect(1).toBeTruthy();
     expect("1").toBeTruthy();
     expect(true).toBeTruthy();
@@ -7,7 +7,7 @@ describe("真偽値の検証", () => {
     expect("").not.toBeTruthy();
     expect(false).not.toBeTruthy();
   });
-  test("「偽の値」の検証", () => {
+  test("거짓인 진릿값 검증", () => {
     expect(0).toBeFalsy();
     expect("").toBeFalsy();
     expect(false).toBeFalsy();
@@ -15,7 +15,7 @@ describe("真偽値の検証", () => {
     expect("1").not.toBeFalsy();
     expect(true).not.toBeFalsy();
   });
-  test("「null, undefined」の検証", () => {
+  test("null과 undefined 검증", () => {
     expect(null).toBeFalsy();
     expect(undefined).toBeFalsy();
     expect(null).toBeNull();
@@ -24,75 +24,75 @@ describe("真偽値の検証", () => {
   });
 });
 
-describe("数値の検証", () => {
+describe("수치 검증", () => {
   const value = 2 + 2;
-  test("検証値 は 期待値 と等しい", () => {
+  test("검증값이 기댓값과 일치한다", () => {
     expect(value).toBe(4);
     expect(value).toEqual(4);
   });
-  test("検証値 は 期待値 より大きい", () => {
+  test("검증값이 기댓값보다 크다", () => {
     expect(value).toBeGreaterThan(3); // 4 > 3
-    expect(value).toBeGreaterThanOrEqual(4); // 4 >= 3
+    expect(value).toBeGreaterThanOrEqual(4); // 4 >= 4
   });
-  test("検証値 は 期待値 より小さい", () => {
+  test("검증값이 기댓값보다 작다", () => {
     expect(value).toBeLessThan(5); // 4 < 5
     expect(value).toBeLessThanOrEqual(4); // 4 <= 4
   });
-  test("小数計算は正確ではない", () => {
+  test("소수계산은 정확하지 않다", () => {
     expect(0.1 + 0.2).not.toBe(0.3);
   });
-  test("小数計算の指定桁までを比較する", () => {
-    expect(0.1 + 0.2).toBeCloseTo(0.3); // デフォルトは 2桁
+  test("소수계산시 지정한 자릿수까지 비교한다", () => {
+    expect(0.1 + 0.2).toBeCloseTo(0.3); // 두 번째 인자의 기본값은 2다
     expect(0.1 + 0.2).toBeCloseTo(0.3, 15);
     expect(0.1 + 0.2).not.toBeCloseTo(0.3, 16);
   });
 });
 
-describe("文字列の検証", () => {
-  const str = "こんにちは世界";
+describe("문자열 검증", () => {
+  const str = "Hello World";
   const obj = { status: 200, message: str };
-  test("検証値 は 期待値 と等しい", () => {
-    expect(str).toBe("こんにちは世界");
-    expect(str).toEqual("こんにちは世界");
-  });
-  test("toHaveLength", () => {
-    expect(str).toHaveLength(7);
-    expect(str).not.toHaveLength(8);
+  test("검증값이 기댓값과 일치한다", () => {
+    expect(str).toBe("Hello World");
+    expect(str).toEqual("Hello World");
   });
   test("toContain", () => {
-    expect(str).toContain("世界");
-    expect(str).not.toContain("さようなら");
+    expect(str).toContain("World");
+    expect(str).not.toContain("Bye");
   });
   test("toMatch", () => {
-    expect(str).toMatch(/世界/);
-    expect(str).not.toMatch(/さようなら/);
+    expect(str).toMatch(/World/);
+    expect(str).not.toMatch(/Bye/);
+  });
+  test("toHaveLength", () => {
+    expect(str).toHaveLength(11);
+    expect(str).not.toHaveLength(12);
   });
   test("stringContaining", () => {
     expect(obj).toEqual({
       status: 200,
-      message: expect.stringContaining("世界"),
+      message: expect.stringContaining("World"),
     });
   });
   test("stringMatching", () => {
     expect(obj).toEqual({
       status: 200,
-      message: expect.stringMatching(/世界/),
+      message: expect.stringMatching(/World/),
     });
   });
 });
 
-describe("配列の検証", () => {
-  describe("プリミティブ配列", () => {
+describe("배열 검증", () => {
+  describe("원시타입의 값들로 구성된 배열", () => {
     const tags = ["Jest", "Storybook", "Playwright", "React", "Next.js"];
     test("toContain", () => {
       expect(tags).toContain("Jest");
       expect(tags).toHaveLength(5);
     });
   });
-  describe("オブジェクト配列", () => {
+  describe("객체들로 구성된 배열", () => {
     const article1 = { author: "taro", title: "Testing Next.js" };
     const article2 = { author: "jiro", title: "Storybook play function" };
-    const article3 = { author: "hanako", title: "Visual Regression Testing " };
+    const article3 = { author: "hanako", title: "Visual Regression Testing" };
     const articles = [article1, article2, article3];
     test("toContainEqual", () => {
       expect(articles).toContainEqual(article1);
@@ -103,7 +103,7 @@ describe("配列の検証", () => {
   });
 });
 
-describe("オブジェクトの検証", () => {
+describe("객체 검증", () => {
   const author = { name: "taroyamada", age: 38 };
   const article = {
     title: "Testing with Jest",
