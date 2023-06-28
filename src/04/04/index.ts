@@ -1,17 +1,17 @@
 import { getMyArticles } from "../fetchers";
 
 export async function getMyArticleLinksByCategory(category: string) {
-  // データを取得する関数
+  // 데이터 취득 함수
   const data = await getMyArticles();
-  // 取得したデータのうち、指定したタグが含まれる記事に絞り込む
+  // 취득한 데이터 중 지정한 태그를 포함한 기사만 골라낸다
   const articles = data.articles.filter((article) =>
     article.tags.includes(category)
   );
   if (!articles.length) {
-    // 該当記事がない場合、null を返す
+    // 해당되는 기사가 없으면 null을 반환한다
     return null;
   }
-  // 該当記事がある場合、一覧向けに加工したデータを返す
+  // 해당되는 기사가 있으면 목록용으로 가공해서 데이터를 반환한다
   return articles.map((article) => ({
     title: article.title,
     link: `/articles/${article.id}`,

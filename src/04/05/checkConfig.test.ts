@@ -1,6 +1,6 @@
 import { checkConfig } from "./checkConfig";
 
-test("モック関数は実行時引数のオブジェクト検証ができる", () => {
+test("목 함수는 실행 시 인자가 객체일 때에도 검증할 수 있다", () => {
   const mockFn = jest.fn();
   checkConfig(mockFn);
   expect(mockFn).toHaveBeenCalledWith({
@@ -9,7 +9,7 @@ test("モック関数は実行時引数のオブジェクト検証ができる",
   });
 });
 
-test("expect.objectContaining による部分検証", () => {
+test("expect.objectContaining에 의한 부분검증", () => {
   const mockFn = jest.fn();
   checkConfig(mockFn);
   expect(mockFn).toHaveBeenCalledWith(

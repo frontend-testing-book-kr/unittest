@@ -1,9 +1,9 @@
 export function greetByTime() {
   const hour = new Date().getHours();
   if (hour < 12) {
-    return "おはよう";
+    return "좋은 아침입니다";
   } else if (hour < 18) {
-    return "こんにちは";
+    return "식사는 하셨나요";
   }
-  return "こんばんは";
+  return "좋은 밤되세요";
 }

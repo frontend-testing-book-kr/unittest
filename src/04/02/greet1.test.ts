@@ -1,5 +1,5 @@
 import { greet } from "./greet";
 
-test("挨拶を返す（本来の実装どおり）", () => {
+test("인사말을 반환한다(원래 구현대로)", () => {
   expect(greet("Taro")).toBe("Hello! Taro.");
 });

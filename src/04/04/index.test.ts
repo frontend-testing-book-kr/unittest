@@ -15,28 +15,28 @@ function mockGetMyArticles(status = 200) {
     .mockResolvedValueOnce(getMyArticlesData);
 }
 
-test("指定したタグをもつ記事が一件もない場合、null が返る", async () => {
+test("지정한 태그를 포함한 기사가 한 건도 없으면 null을 반환한다", async () => {
   mockGetMyArticles();
   const data = await getMyArticleLinksByCategory("playwright");
   expect(data).toBeNull();
 });
 
-test("指定したタグをもつ記事が一件以上ある場合、リンク一覧が返る", async () => {
+test("지정한 태그를 포함한 기사가 한 건 이상 있으면 링크 목록을 반환한다", async () => {
   mockGetMyArticles();
   const data = await getMyArticleLinksByCategory("testing");
   expect(data).toMatchObject([
     {
       link: "/articles/howto-testing-with-typescript",
-      title: "TypeScript を使ったテストの書き方",
+      title: "TypeScript를 사용한 테스트 작성법",
     },
     {
       link: "/articles/react-component-testing-with-jest",
-      title: "Jest ではじめる React のコンポーネントテスト",
+      title: "Jest로 시작하는 React 컴포넌트 테스트",
     },
   ]);
 });
 
-test("データ取得に失敗した場合、reject される", async () => {
+test("데이터 취득에 실패하면 reject된다", async () => {
   mockGetMyArticles(500);
   await getMyArticleLinksByCategory("testing").catch((err) => {
     expect(err).toMatchObject({

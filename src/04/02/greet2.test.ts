@@ -2,6 +2,6 @@ import { greet } from "./greet";
 
 jest.mock("./greet");
 
-test("挨拶を返さない（本来の実装ではない）", () => {
+test("인사말을 반환하지 않는다(원래 구현과 다르게)", () => {
   expect(greet("Taro")).toBe(undefined);
 });

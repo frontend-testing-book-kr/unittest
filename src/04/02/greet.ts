@@ -3,5 +3,5 @@ export function greet(name: string) {
 }
 
 export function sayGoodBye(name: string) {
-  throw new Error("未実装");
+  throw new Error("미구현");
 }

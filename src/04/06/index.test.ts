@@ -28,51 +28,51 @@ function mockPostMyArticle(input: ArticleInput, status = 200) {
 function inputFactory(input?: Partial<ArticleInput>) {
   return {
     tags: ["testing"],
-    title: "TypeScript を使ったテストの書き方",
-    body: "テストを書く時、TypeScript を使うことで、テストの保守性が向上します。",
+    title: "TypeScript를 사용한 테스트 작성법",
+    body: "테스트 작성시 TypeScript를 사용하면 테스트의 유지보수가 쉬워진다",
     ...input,
   };
 }
 
-test("バリデーションに成功した場合、成功レスポンスが返る", async () => {
-  // バリデーションに通過する入力値を用意
+test("유효성 검사에 성공하면 성공 응답을 반환한다", async () => {
+  // 유효성 검사에 통과하는 입력을 준비한다
   const input = inputFactory();
-  // 入力値を含んだ成功レスポンスが返るよう、モック
+  // 입력값을 포함한 성공 응답을 반환하는 목을 만든다
   const mock = mockPostMyArticle(input);
-  // テスト対象の関数に、input を与えて実行
+  // input을 인자로 테스트할 함수를 실행한다
   const data = await postMyArticle(input);
-  // 取得したデータに、入力内容が含まれているかを検証
+  // 취득한 데이터에 입력 내용이 포함되어 있는지 검증한다
   expect(data).toMatchObject(expect.objectContaining(input));
-  // モック関数が呼び出されたかを検証
+  // 목 함수가 호출되었는지 검증한다
   expect(mock).toHaveBeenCalled();
 });
 
-test("バリデーションに失敗した場合、reject される", async () => {
+test("유효성 검사에 실패하면 reject된다", async () => {
   expect.assertions(2);
-  // バリデーションに通過しない入力値を用意
+  // 유효성 검사에 통과하지 못하는 입력을 준비한다
   const input = inputFactory({ title: "", body: "" });
-  // 入力値を含んだ成功レスポンスが返るよう、モック
+  // 입력값을 포함한 성공 응답을 반환하는 목을 만든다
   const mock = mockPostMyArticle(input);
-  // バリデーションに通過せず reject されるかを検証
+  // 유효성 검사에 통과하지 못하고 reject 되었는지 검증한다
   await postMyArticle(input).catch((err) => {
-    // エラーオブジェクトをもって reject されたことを検証
+    // 에러 객체가 reject 되었는지 검증한다
     expect(err).toMatchObject({ err: { message: expect.anything() } });
-    // モック関数が呼び出されたことを検証
+    // 목 함수가 호출되었는지 검증한다
     expect(mock).toHaveBeenCalled();
   });
 });
 
-test("データ取得に失敗した場合、reject される", async () => {
+test("데이터 취득에 실패하면 reject된다", async () => {
   expect.assertions(2);
-  // バリデーションに通過する入力値を用意
+  // 유효성 검사에 통과하는 입력값을 준비한다
   const input = inputFactory();
-  // 失敗レスポンスが返るようモック
+  // 실패 응답을 반환하는 목을 만든다
   const mock = mockPostMyArticle(input, 500);
-  // reject されるかを検証
+  // reject되었는지 검증한다
   await postMyArticle(input).catch((err) => {
-    // エラーオブジェクトをもって reject されたことを検証
+    // 에러 객체가 reject되었는지 검증한다
     expect(err).toMatchObject({ err: { message: expect.anything() } });
-    // モック関数が呼び出されたことを検証
+    // 목 함수가 호출되었는지 검증한다
     expect(mock).toHaveBeenCalled();
   });
 });
