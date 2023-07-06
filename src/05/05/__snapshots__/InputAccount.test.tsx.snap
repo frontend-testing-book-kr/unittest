@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: アカウント情報の入力フォームが表示される 1`] = `
+exports[`Snapshot: 계정정보 입력 폼이 표시된다 1`] = `
 <div>
   <fieldset>
     <legend>
-      アカウント情報の入力
+      계정정보 입력
     </legend>
     <div>
       <label>
-        メールアドレス
+        메일주소
         <input
           placeholder="example@test.com"
           type="text"
@@ -17,9 +17,9 @@ exports[`Snapshot: アカウント情報の入力フォームが表示される 
     </div>
     <div>
       <label>
-        パスワード
+        비밀번호
         <input
-          placeholder="8文字以上で入力"
+          placeholder="8자 이상"
           type="password"
         />
       </label>

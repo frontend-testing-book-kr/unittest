@@ -3,7 +3,7 @@ type Props = { onChange: (flag: boolean) => void };
 export const RegisterDeliveryAddress = ({ onChange }: Props) => {
   return (
     <fieldset>
-      <legend>新しいお届け先を登録しますか？</legend>
+      <legend>새로운 배송지를 등록하시겠습니까?</legend>
       <label>
         <input
           type="radio"
@@ -13,7 +13,7 @@ export const RegisterDeliveryAddress = ({ onChange }: Props) => {
             onChange(false);
           }}
         />
-        いいえ
+        아니오
       </label>
       <label>
         <input
@@ -24,7 +24,7 @@ export const RegisterDeliveryAddress = ({ onChange }: Props) => {
             onChange(true);
           }}
         />
-        はい
+        네
       </label>
     </fieldset>
   );

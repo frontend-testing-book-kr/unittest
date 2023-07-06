@@ -7,7 +7,7 @@ export const Form = () => {
   const headingId = useId();
   return (
     <form aria-labelledby={headingId}>
-      <h2 id={headingId}>新規アカウント登録</h2>
+      <h2 id={headingId}>신규 계정 등록</h2>
       <InputAccount />
       <Agreement
         onChange={(event) => {
@@ -15,7 +15,7 @@ export const Form = () => {
         }}
       />
       <div>
-        <button disabled={!checked}>サインアップ</button>
+        <button disabled={!checked}>회원가입</button>
       </div>
     </form>
   );

@@ -9,7 +9,7 @@ export const PastDeliveryAddress = ({
 }) => {
   return (
     <fieldset disabled={disabled} style={{ opacity: disabled ? 0.3 : 1 }}>
-      <legend>過去のお届け先</legend>
+      <legend>이전 배송지</legend>
       <select name="pastDeliveryAddress">
         {options.map(({ id, ...opt }) => (
           <option key={id} {...opt} />

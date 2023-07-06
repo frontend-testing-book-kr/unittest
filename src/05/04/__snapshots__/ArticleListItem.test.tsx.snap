@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: 一覧要素が表示される 1`] = `
+exports[`Snapshot: 개별 아이템이 표시되었는지 확인 1`] = `
 <div>
   <li>
     <h3>
-      TypeScript を使ったテストの書き方
+      TypeScript를 사용한 테스트 작성법
     </h3>
     <p>
-      テストを書く時、TypeScript を使うことで、テストの保守性が向上します…
+      테스트 작성시 TypeScript를 사용하면 테스트의 유지보수가 쉬워진다
     </p>
     <a
       href="/articles/howto-testing-with-typescript"
     >
-      もっと見る
+      더 알아보기
     </a>
   </li>
 </div>

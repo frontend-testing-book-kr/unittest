@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: 登録フォームが表示される 1`] = `
+exports[`Snapshot: 등록 폼이 표시된다 1`] = `
 <div>
   <div>
     <form>
       <h2>
-        お届け先情報の入力
+        배송지 정보 입력
       </h2>
       <fieldset>
         <legend>
-          連絡先
+          연락처
         </legend>
         <div>
           <label>
-            電話番号
+            전화번호
             <input
               name="phoneNumber"
               type="text"
@@ -22,7 +22,7 @@ exports[`Snapshot: 登録フォームが表示される 1`] = `
         </div>
         <div>
           <label>
-            お名前
+            이름
             <input
               name="name"
               type="text"
@@ -32,44 +32,44 @@ exports[`Snapshot: 登録フォームが表示される 1`] = `
       </fieldset>
       <fieldset>
         <legend>
-          お届け先
+          배송지
         </legend>
         <div>
           <label>
-            郵便番号
+            우편번호
             <input
               name="postalCode"
-              placeholder="167-0051"
+              placeholder="16397"
               type="text"
             />
           </label>
         </div>
         <div>
           <label>
-            都道府県
+            시/도
             <input
               name="prefectures"
-              placeholder="東京都"
+              placeholder="경기도"
               type="text"
             />
           </label>
         </div>
         <div>
           <label>
-            市区町村
+            시/군/구
             <input
               name="municipalities"
-              placeholder="杉並区荻窪1"
+              placeholder="수원시 권선구"
               type="text"
             />
           </label>
         </div>
         <div>
           <label>
-            番地番号
+            도로명
             <input
               name="streetNumber"
-              placeholder="00-00"
+              placeholder="매곡로 67"
               type="text"
             />
           </label>
@@ -78,7 +78,7 @@ exports[`Snapshot: 登録フォームが表示される 1`] = `
       <hr />
       <div>
         <button>
-          注文内容の確認へ進む
+          주문내용 확인
         </button>
       </div>
     </form>

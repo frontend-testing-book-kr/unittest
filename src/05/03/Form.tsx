@@ -10,10 +10,10 @@ export const Form = ({ name, onSubmit }: Props) => {
         onSubmit?.(event);
       }}
     >
-      <h2>アカウント情報</h2>
+      <h2>계정 정보</h2>
       <p>{name}</p>
       <div>
-        <button>編集する</button>
+        <button>수정</button>
       </div>
     </form>
   );

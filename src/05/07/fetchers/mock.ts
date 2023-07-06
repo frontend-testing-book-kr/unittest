@@ -1,7 +1,7 @@
 import * as Fetchers from ".";
 import { httpError, postMyAddressMock } from "./fixtures";
 
-export function mockPostMyAddress(status = 201) {
+export function mockPostMyAddress(status = 200) {
   if (status > 299) {
     return jest
       .spyOn(Fetchers, "postMyAddress")

@@ -1,3 +1,9 @@
+/* 리스트 5-1
+module.exports = {
+  testEnvironment: "jest-environment-jsdom",
+};
+*/
+
 export default {
   clearMocks: true,
   collectCoverage: false,

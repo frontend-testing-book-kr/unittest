@@ -9,11 +9,11 @@ export default {
 type Story = ComponentStoryObj<typeof Form>;
 
 export const NoDeliveryAddresses: Story = {
-  storyName: "過去のお届け先がない場合",
+  storyName: "이전 배송지가 없는 경우",
   args: { deliveryAddresses: [] },
 };
 
 export const HasDeliveryAddresses: Story = {
-  storyName: "過去のお届け先がある場合",
+  storyName: "이전 배송지가 있는 경우",
   args: { deliveryAddresses },
 };

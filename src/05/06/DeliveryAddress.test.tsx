@@ -1,37 +1,37 @@
 import { render, screen } from "@testing-library/react";
 import { DeliveryAddress } from "./DeliveryAddress";
 
-describe("お届け先", () => {
-  test("タイトル", () => {
+describe("배송지", () => {
+  test("제목", () => {
     render(<DeliveryAddress />);
-    expect(screen.getByText("お届け先")).toBeInTheDocument();
+    expect(screen.getByText("배송지")).toBeInTheDocument();
   });
-  test("タイトルが変更できる", () => {
-    render(<DeliveryAddress title="新しいお届け先" />);
-    expect(screen.getByText("新しいお届け先")).toBeInTheDocument();
+  test("제목을 변경할 수 있다", () => {
+    render(<DeliveryAddress title="새로운 배송지" />);
+    expect(screen.getByText("새로운 배송지")).toBeInTheDocument();
   });
-  test("郵便番号", () => {
+  test("우편번호", () => {
     render(<DeliveryAddress />);
     expect(
-      screen.getByRole("textbox", { name: "郵便番号" })
+      screen.getByRole("textbox", { name: "우편번호" })
     ).toBeInTheDocument();
   });
-  test("都道府県", () => {
+  test("시/도", () => {
     render(<DeliveryAddress />);
     expect(
-      screen.getByRole("textbox", { name: "都道府県" })
+      screen.getByRole("textbox", { name: "시/도" })
     ).toBeInTheDocument();
   });
-  test("市区町村", () => {
+  test("시/군/구", () => {
     render(<DeliveryAddress />);
     expect(
-      screen.getByRole("textbox", { name: "市区町村" })
+      screen.getByRole("textbox", { name: "시/군/구" })
     ).toBeInTheDocument();
   });
-  test("番地番号", () => {
+  test("도로명", () => {
     render(<DeliveryAddress />);
     expect(
-      screen.getByRole("textbox", { name: "番地番号" })
+      screen.getByRole("textbox", { name: "도로명" })
     ).toBeInTheDocument();
   });
 });

@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`過去のお届け先がある場合 Snapshot 1`] = `
+exports[`이전 배송지가 없는 경우 Snapshot 1`] = `
 <div>
   <form>
     <h2>
-      お届け先情報の入力
+      배송지 정보 입력
     </h2>
     <fieldset>
       <legend>
-        連絡先
+        연락처
       </legend>
       <div>
         <label>
-          電話番号
+          전화번호
           <input
             name="phoneNumber"
             type="text"
@@ -21,7 +21,7 @@ exports[`過去のお届け先がある場合 Snapshot 1`] = `
       </div>
       <div>
         <label>
-          お名前
+          이름
           <input
             name="name"
             type="text"
@@ -31,7 +31,91 @@ exports[`過去のお届け先がある場合 Snapshot 1`] = `
     </fieldset>
     <fieldset>
       <legend>
-        新しいお届け先を登録しますか？
+        배송지
+      </legend>
+      <div>
+        <label>
+          우편번호
+          <input
+            name="postalCode"
+            placeholder="16397"
+            type="text"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          시/도
+          <input
+            name="prefectures"
+            placeholder="경기도"
+            type="text"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          시/군/구
+          <input
+            name="municipalities"
+            placeholder="수원시 권선구"
+            type="text"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          도로명
+          <input
+            name="streetNumber"
+            placeholder="매곡로 67"
+            type="text"
+          />
+        </label>
+      </div>
+    </fieldset>
+    <hr />
+    <div>
+      <button>
+        주문내용 확인
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`이전 배송지가 있는 경우 Snapshot 1`] = `
+<div>
+  <form>
+    <h2>
+      배송지 정보 입력
+    </h2>
+    <fieldset>
+      <legend>
+        연락처
+      </legend>
+      <div>
+        <label>
+          전화번호
+          <input
+            name="phoneNumber"
+            type="text"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          이름
+          <input
+            name="name"
+            type="text"
+          />
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        새로운 배송지를 등록하시겠습니까?
       </legend>
       <label>
         <input
@@ -39,7 +123,7 @@ exports[`過去のお届け先がある場合 Snapshot 1`] = `
           type="radio"
           value="0"
         />
-        いいえ
+        아니오
       </label>
       <label>
         <input
@@ -47,7 +131,7 @@ exports[`過去のお届け先がある場合 Snapshot 1`] = `
           type="radio"
           value="1"
         />
-        はい
+        네
       </label>
     </fieldset>
     <fieldset
@@ -55,7 +139,7 @@ exports[`過去のお届け先がある場合 Snapshot 1`] = `
       style="opacity: 0.3;"
     >
       <legend>
-        過去のお届け先
+        이전 배송지
       </legend>
       <select
         name="pastDeliveryAddress"
@@ -63,98 +147,14 @@ exports[`過去のお届け先がある場合 Snapshot 1`] = `
         <option
           value="address_id_xxxx"
         >
-          〒167-0051 東京都杉並区荻窪1-00-00
+          우16397 경기도 수원시 권선구 매곡로 67
         </option>
       </select>
     </fieldset>
     <hr />
     <div>
       <button>
-        注文内容の確認へ進む
-      </button>
-    </div>
-  </form>
-</div>
-`;
-
-exports[`過去のお届け先がない場合 Snapshot 1`] = `
-<div>
-  <form>
-    <h2>
-      お届け先情報の入力
-    </h2>
-    <fieldset>
-      <legend>
-        連絡先
-      </legend>
-      <div>
-        <label>
-          電話番号
-          <input
-            name="phoneNumber"
-            type="text"
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          お名前
-          <input
-            name="name"
-            type="text"
-          />
-        </label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>
-        お届け先
-      </legend>
-      <div>
-        <label>
-          郵便番号
-          <input
-            name="postalCode"
-            placeholder="167-0051"
-            type="text"
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          都道府県
-          <input
-            name="prefectures"
-            placeholder="東京都"
-            type="text"
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          市区町村
-          <input
-            name="municipalities"
-            placeholder="杉並区荻窪1"
-            type="text"
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          番地番号
-          <input
-            name="streetNumber"
-            placeholder="00-00"
-            type="text"
-          />
-        </label>
-      </div>
-    </fieldset>
-    <hr />
-    <div>
-      <button>
-        注文内容の確認へ進む
+        주문내용 확인
       </button>
     </div>
   </form>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: 新規アカウント登録フォームが表示される 1`] = `
+exports[`Snapshot: 신규 계정 등록 폼이 표시된다 1`] = `
 <div>
   <form
     aria-labelledby=":r4:"
@@ -8,15 +8,15 @@ exports[`Snapshot: 新規アカウント登録フォームが表示される 1`]
     <h2
       id=":r4:"
     >
-      新規アカウント登録
+      신규 계정 등록
     </h2>
     <fieldset>
       <legend>
-        アカウント情報の入力
+        계정정보 입력
       </legend>
       <div>
         <label>
-          メールアドレス
+          메일주소
           <input
             placeholder="example@test.com"
             type="text"
@@ -25,9 +25,9 @@ exports[`Snapshot: 新規アカウント登録フォームが表示される 1`]
       </div>
       <div>
         <label>
-          パスワード
+          비밀번호
           <input
-            placeholder="8文字以上で入力"
+            placeholder="8자 이상"
             type="password"
           />
         </label>
@@ -35,26 +35,26 @@ exports[`Snapshot: 新規アカウント登録フォームが表示される 1`]
     </fieldset>
     <fieldset>
       <legend>
-        利用規約の同意
+        이용계약 동의
       </legend>
       <label>
         <input
           type="checkbox"
         />
-        当サービスの
+        서비스 
         <a
           href="/terms"
         >
-          利用規約
+          이용계약
         </a>
-        を確認し、これに同意します
+        을 확인했으며 이에 동의합니다
       </label>
     </fieldset>
     <div>
       <button
         disabled=""
       >
-        サインアップ
+        회원가입
       </button>
     </div>
   </form>

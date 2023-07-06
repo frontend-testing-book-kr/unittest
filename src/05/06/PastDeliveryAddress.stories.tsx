@@ -8,7 +8,7 @@ export default {
       {
         id: "xxx",
         value: "xxx",
-        children: "〒167-0051 東京都杉並区荻窪1-00-00",
+        children: "우16397 경기도 수원시 권선구 매곡로 67",
       },
     ],
   },

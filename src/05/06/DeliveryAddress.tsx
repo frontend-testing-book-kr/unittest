@@ -1,29 +1,29 @@
-export const DeliveryAddress = ({ title = "お届け先" }: { title?: string }) => {
+export const DeliveryAddress = ({ title = "배송지" }: { title?: string }) => {
   return (
     <fieldset>
       <legend>{title}</legend>
       <div>
         <label>
-          郵便番号
-          <input type="text" name="postalCode" placeholder="167-0051" />
+          우편번호
+          <input type="text" name="postalCode" placeholder="16397" />
         </label>
       </div>
       <div>
         <label>
-          都道府県
-          <input type="text" name="prefectures" placeholder="東京都" />
+          시/도
+          <input type="text" name="prefectures" placeholder="경기도" />
         </label>
       </div>
       <div>
         <label>
-          市区町村
-          <input type="text" name="municipalities" placeholder="杉並区荻窪1" />
+          시/군/구
+          <input type="text" name="municipalities" placeholder="수원시 권선구" />
         </label>
       </div>
       <div>
         <label>
-          番地番号
-          <input type="text" name="streetNumber" placeholder="00-00" />
+          도로명
+          <input type="text" name="streetNumber" placeholder="매곡로 67" />
         </label>
       </div>
     </fieldset>

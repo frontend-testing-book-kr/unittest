@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { ContactNumber } from "./ContactNumber";
 
-describe("連絡先", () => {
-  test("タイトル", () => {
+describe("연락처", () => {
+  test("제목", () => {
     render(<ContactNumber />);
-    expect(screen.getByText("連絡先")).toBeInTheDocument();
+    expect(screen.getByText("연락처")).toBeInTheDocument();
   });
-  test("電話番号", () => {
+  test("전화번호", () => {
     render(<ContactNumber />);
-    expect(screen.getByLabelText("電話番号")).toBeInTheDocument();
+    expect(screen.getByLabelText("전화번호")).toBeInTheDocument();
   });
-  test("お名前", () => {
+  test("이름", () => {
     render(<ContactNumber />);
-    expect(screen.getByLabelText("お名前")).toBeInTheDocument();
+    expect(screen.getByLabelText("이름")).toBeInTheDocument();
   });
 });

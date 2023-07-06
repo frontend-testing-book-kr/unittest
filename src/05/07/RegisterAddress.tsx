@@ -4,6 +4,22 @@ import { postMyAddress } from "./fetchers";
 import { handleSubmit } from "./handleSubmit";
 import { checkPhoneNumber, ValidationError } from "./validations";
 
+/* 리스트 5-46
+<Form
+  onSubmit={handleSubmit((values) => {
+    try {
+      checkPhoneNumber(values.phoneNumber);
+      // 데이터 취득 함수
+    } catch (err) {
+      if (err instanceof ValidationError) {
+        setPostResult("올바르지 않은 값이 포함되어 있습니다");
+        return;
+      }
+    }
+  })}
+/>
+*/
+
 export const RegisterAddress = () => {
   const [postResult, setPostResult] = useState("");
   return (
@@ -14,17 +30,17 @@ export const RegisterAddress = () => {
             checkPhoneNumber(values.phoneNumber);
             postMyAddress(values)
               .then(() => {
-                setPostResult("登録しました");
+                setPostResult("등록되었습니다");
               })
               .catch(() => {
-                setPostResult("登録に失敗しました");
+                setPostResult("등록에 실패했습니다");
               });
           } catch (err) {
             if (err instanceof ValidationError) {
-              setPostResult("不正な入力値が含まれています");
+              setPostResult("올바르지 않은 값이 포함되어 있습니다");
               return;
             }
-            setPostResult("不明なエラーが発生しました");
+            setPostResult("알 수 없는 에러가 발생했습니다");
           }
         })}
       />

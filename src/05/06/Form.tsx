@@ -15,13 +15,13 @@ export const Form = (props: Props) => {
   );
   return (
     <form onSubmit={props.onSubmit}>
-      <h2>お届け先情報の入力</h2>
+      <h2>배송지 정보 입력</h2>
       <ContactNumber />
       {props.deliveryAddresses?.length ? (
         <>
           <RegisterDeliveryAddress onChange={setRegisterNew} />
           {registerNew ? (
-            <DeliveryAddress title="新しいお届け先" />
+            <DeliveryAddress title="새로운 배송지" />
           ) : (
             <PastDeliveryAddress
               disabled={registerNew === undefined}
@@ -34,7 +34,7 @@ export const Form = (props: Props) => {
       )}
       <hr />
       <div>
-        <button>注文内容の確認へ進む</button>
+        <button>주문내용 확인</button>
       </div>
     </form>
   );

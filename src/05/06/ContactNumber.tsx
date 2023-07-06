@@ -1,16 +1,16 @@
 export const ContactNumber = () => {
   return (
     <fieldset>
-      <legend>連絡先</legend>
+      <legend>연락처</legend>
       <div>
         <label>
-          電話番号
+          전화번호
           <input type="text" name="phoneNumber" />
         </label>
       </div>
       <div>
         <label>
-          お名前
+          이름
           <input type="text" name="name" />
         </label>
       </div>

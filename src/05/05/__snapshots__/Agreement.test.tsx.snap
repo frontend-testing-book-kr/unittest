@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: 利用規約の同意が表示される 1`] = `
+exports[`Snapshot: 이용계약 동의가 표시되어 있다 1`] = `
 <div>
   <fieldset>
     <legend>
-      利用規約の同意
+      이용계약 동의
     </legend>
     <label>
       <input
         type="checkbox"
       />
-      当サービスの
+      서비스 
       <a
         href="/terms"
       >
-        利用規約
+        이용계약
       </a>
-      を確認し、これに同意します
+      을 확인했으며 이에 동의합니다
     </label>
   </fieldset>
 </div>
