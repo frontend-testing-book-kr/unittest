@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { Articles } from "./Articles";
 
-xtest("読み込み中の場合「..loading」が表示される", () => {
+xtest("데이터를 불러오는 중이면 '..loading'을 표시한다", () => {
   render(<Articles items={[]} isLoading={true} />);
   expect(screen.getByText("...loading")).toBeInTheDocument();
 });
 
-xtest("一覧要素が空の場合「投稿記事がありません」が表示される", () => {
+xtest("목록이 비어 있으면 '게재된 기사가 없습니다'를 표시한다", () => {
   render(<Articles items={[]} isLoading={false} />);
-  expect(screen.getByText("投稿記事がありません")).toBeInTheDocument();
+  expect(screen.getByText("게재된 기사가 없습니다")).toBeInTheDocument();
 });
 
-test("一覧要素がある場合、一覧が表示される", () => {
+test("목록에 표시할 데이터가 있으면 목록이 표시된다", () => {
   const items = [
     { id: 1, title: "Testing Next.js" },
     { id: 2, title: "Storybook play function" },

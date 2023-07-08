@@ -7,19 +7,19 @@ describe("greetByTime(", () => {
   afterEach(() => {
     jest.useRealTimers();
   });
-  // (1) 「おはよう」を返す関数
-  test("朝は「おはよう」を返す", () => {
+  // (1) '좋은 아침입니다'를 반환하는 함수
+  test("아침에는 '좋은 아침입니다'를 반환한다", () => {
     jest.setSystemTime(new Date(2023, 4, 23, 8, 0, 0));
-    expect(greetByTime()).toBe("おはよう");
+    expect(greetByTime()).toBe("좋은 아침입니다");
   });
-  // (2) 「こんにちは」を返す関数
-  xtest("昼は「こんにちは」を返す", () => {
+  // (2) '식사는 하셨나요'를 반환하는 함수
+  xtest("점심에는 '식사는 하셨나요'를 반환한다", () => {
     jest.setSystemTime(new Date(2023, 4, 23, 14, 0, 0));
-    expect(greetByTime()).toBe("こんにちは");
+    expect(greetByTime()).toBe("식사는 하셨나요");
   });
-  // (3) 「こんばんは」を返す関数
-  xtest("夜は「こんばんは」を返す", () => {
+  // (3) '좋은 밤되세요'를 반환하는 함수
+  xtest("저녁에는 '좋은 밤되세요'를 반환한다", () => {
     jest.setSystemTime(new Date(2023, 4, 23, 21, 0, 0));
-    expect(greetByTime()).toBe("こんばんは");
+    expect(greetByTime()).toBe("좋은 밤되세요");
   });
 });
