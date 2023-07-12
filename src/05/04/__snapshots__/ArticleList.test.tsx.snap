@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: items의 수만큼 목록이 표시되었는지 확인 1`] = `
+exports[`Snapshot: items의 수만큼 목록을 표시한다 1`] = `
 <div>
   <div>
     <h2>

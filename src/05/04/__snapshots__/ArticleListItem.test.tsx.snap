@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: 개별 아이템이 표시되었는지 확인 1`] = `
+exports[`Snapshot: 개별 아이템을 표시한다 1`] = `
 <div>
   <li>
     <h3>

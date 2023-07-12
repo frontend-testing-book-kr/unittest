@@ -37,13 +37,13 @@ function inputFactory(input?: Partial<ArticleInput>) {
 test("유효성 검사에 성공하면 성공 응답을 반환한다", async () => {
   // 유효성 검사에 통과하는 입력을 준비한다
   const input = inputFactory();
-  // 입력값을 포함한 성공 응답을 반환하는 목을 만든다
+  // 입력값을 포함한 성공 응답을 반환하는 모의 객체를 만든다
   const mock = mockPostMyArticle(input);
   // input을 인자로 테스트할 함수를 실행한다
   const data = await postMyArticle(input);
   // 취득한 데이터에 입력 내용이 포함되어 있는지 검증한다
   expect(data).toMatchObject(expect.objectContaining(input));
-  // 목 함수가 호출되었는지 검증한다
+  // 모의 객체 생성함수가 호출되었는지 검증한다
   expect(mock).toHaveBeenCalled();
 });
 
@@ -51,13 +51,13 @@ test("유효성 검사에 실패하면 reject된다", async () => {
   expect.assertions(2);
   // 유효성 검사에 통과하지 못하는 입력을 준비한다
   const input = inputFactory({ title: "", body: "" });
-  // 입력값을 포함한 성공 응답을 반환하는 목을 만든다
+  // 입력값을 포함한 성공 응답을 반환하는 모의 객체를 만든다
   const mock = mockPostMyArticle(input);
   // 유효성 검사에 통과하지 못하고 reject 되었는지 검증한다
   await postMyArticle(input).catch((err) => {
     // 에러 객체가 reject 되었는지 검증한다
     expect(err).toMatchObject({ err: { message: expect.anything() } });
-    // 목 함수가 호출되었는지 검증한다
+    // 모의 객체 생성함수가 호출되었는지 검증한다
     expect(mock).toHaveBeenCalled();
   });
 });
@@ -66,13 +66,13 @@ test("데이터 취득에 실패하면 reject된다", async () => {
   expect.assertions(2);
   // 유효성 검사에 통과하는 입력값을 준비한다
   const input = inputFactory();
-  // 실패 응답을 반환하는 목을 만든다
+  // 실패 응답을 반환하는 모의 객체를 만든다
   const mock = mockPostMyArticle(input, 500);
   // reject되었는지 검증한다
   await postMyArticle(input).catch((err) => {
     // 에러 객체가 reject되었는지 검증한다
     expect(err).toMatchObject({ err: { message: expect.anything() } });
-    // 목 함수가 호출되었는지 검증한다
+    // 모의 객체 생성함수가 호출되었는지 검증한다
     expect(mock).toHaveBeenCalled();
   });
 });

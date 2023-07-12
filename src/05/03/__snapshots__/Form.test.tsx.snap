@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: 계정명인 'taro'가 표시되었는지 확인한다 1`] = `
+exports[`Snapshot: 계정명인 'taro'가 표시된다 1`] = `
 <div>
   <form>
     <h2>

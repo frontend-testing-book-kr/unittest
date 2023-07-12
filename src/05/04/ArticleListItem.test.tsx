@@ -7,7 +7,7 @@ const item: ItemProps = {
   body: "테스트 작성시 TypeScript를 사용하면 테스트의 유지보수가 쉬워진다",
 };
 
-test("링크에 id로 만들어진 URL이 표시되었는지 확인", () => {
+test("링크에 id로 만든 URL을 표시한다", () => {
   render(<ArticleListItem {...item} />);
   expect(screen.getByRole("link", { name: "더 알아보기" })).toHaveAttribute(
     "href",
@@ -15,7 +15,7 @@ test("링크에 id로 만들어진 URL이 표시되었는지 확인", () => {
   );
 });
 
-test("Snapshot: 개별 아이템이 표시되었는지 확인", () => {
+test("Snapshot: 개별 아이템을 표시한다", () => {
   const { container } = render(<ArticleListItem {...item} />);
   expect(container).toMatchSnapshot();
 });
