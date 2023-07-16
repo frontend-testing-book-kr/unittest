@@ -17,7 +17,7 @@ jest.spyOn(Fetchers, "getMyProfile").mockRejectedValueOnce(httpError);
 */
 
 describe("getGreet", () => {
-  test("데이터 취득 성공시 : 유저명이 없는 경우", async () => {
+  test("데이터 취득 성공시 : 사용자 이름이 없는 경우", async () => {
     // getMyProfile이 resolve됐을 때의 값을 재현
     jest.spyOn(Fetchers, "getMyProfile").mockResolvedValueOnce({
       id: "xxxxxxx-123456",
@@ -25,7 +25,7 @@ describe("getGreet", () => {
     });
     await expect(getGreet()).resolves.toBe("Hello, anonymous user!");
   });
-  test("데이터 취득 성공시: 유저명이 있는 경우", async () => {
+  test("데이터 취득 성공시: 사용자 이름이 있는 경우", async () => {
     jest.spyOn(Fetchers, "getMyProfile").mockResolvedValueOnce({
       id: "xxxxxxx-123456",
       email: "taroyamada@myapi.testing.com",
