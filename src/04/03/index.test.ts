@@ -40,7 +40,7 @@ describe("getGreet", () => {
       err: { message: "internal server error" },
     });
   });
-  test("데이터 취득 실패시 에러가 발생한 데이터와 함께 예외가 발생한다", async () => {
+  test("데이터 취득 실패시 에러가 발생한 데이터와 함께 예외가 throw된다", async () => {
     expect.assertions(1);
     jest.spyOn(Fetchers, "getMyProfile").mockRejectedValueOnce(httpError);
     try {

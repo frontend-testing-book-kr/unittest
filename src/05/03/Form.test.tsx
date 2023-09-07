@@ -36,7 +36,7 @@ test("heading을 표시한다", () => {
   expect(screen.getByRole("heading")).toHaveTextContent("계정 정보");
 });
 
-test("버튼을 클릭하면 이벤트 핸들러가 호출된다", () => {
+test("버튼을 클릭하면 이벤트 핸들러가 실행된다", () => {
   const mockFn = jest.fn();
   render(<Form name="taro" onSubmit={mockFn} />);
   fireEvent.click(screen.getByRole("button"));

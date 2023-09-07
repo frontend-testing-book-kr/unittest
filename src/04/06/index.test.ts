@@ -43,7 +43,7 @@ test("유효성 검사에 성공하면 성공 응답을 반환한다", async () 
   const data = await postMyArticle(input);
   // 취득한 데이터에 입력 내용이 포함되어 있는지 검증한다
   expect(data).toMatchObject(expect.objectContaining(input));
-  // 모의 객체 생성함수가 호출되었는지 검증한다
+  // 모의 함수가 호출되었는지 검증한다
   expect(mock).toHaveBeenCalled();
 });
 
@@ -57,7 +57,7 @@ test("유효성 검사에 실패하면 reject된다", async () => {
   await postMyArticle(input).catch((err) => {
     // 에러 객체가 reject 되었는지 검증한다
     expect(err).toMatchObject({ err: { message: expect.anything() } });
-    // 모의 객체 생성함수가 호출되었는지 검증한다
+    // 모의 함수가 호출되었는지 검증한다
     expect(mock).toHaveBeenCalled();
   });
 });
@@ -72,7 +72,7 @@ test("데이터 취득에 실패하면 reject된다", async () => {
   await postMyArticle(input).catch((err) => {
     // 에러 객체가 reject되었는지 검증한다
     expect(err).toMatchObject({ err: { message: expect.anything() } });
-    // 모의 객체 생성함수가 호출되었는지 검증한다
+    // 모의 함수가 호출되었는지 검증한다
     expect(mock).toHaveBeenCalled();
   });
 });

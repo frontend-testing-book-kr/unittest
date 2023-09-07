@@ -1,7 +1,7 @@
 import { getMyArticles } from "../fetchers";
 
 export async function getMyArticleLinksByCategory(category: string) {
-  // 데이터 취득 함수
+  // 데이터 취득 함수(Web API 클라이언트)
   const data = await getMyArticles();
   // 취득한 데이터 중 지정한 태그를 포함한 기사만 골라낸다
   const articles = data.articles.filter((article) =>

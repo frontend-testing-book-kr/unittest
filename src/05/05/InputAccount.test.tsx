@@ -24,8 +24,8 @@ test("메일주소 입력란", async () => {
   render(<InputAccount />);
   // 메일주소 입력란 취득
   const textbox = screen.getByRole("textbox", { name: "메일주소" });
-  // textbox에 value를 입력
   const value = "taro.tanaka@example.com";
+  // textbox에 value를 입력
   await user.type(textbox, value);
   // 초기값이 입력되어 있는 폼 요소가 존재하는지 검증
   expect(screen.getByDisplayValue(value)).toBeInTheDocument();
