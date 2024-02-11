@@ -35,7 +35,7 @@ exports[`Snapshot: 신규 계정 등록 폼이 표시된다 1`] = `
     </fieldset>
     <fieldset>
       <legend>
-        이용계약 동의
+        이용 약관 동의
       </legend>
       <label>
         <input
@@ -45,7 +45,7 @@ exports[`Snapshot: 신규 계정 등록 폼이 표시된다 1`] = `
         <a
           href="/terms"
         >
-          이용계약
+          이용 약관
         </a>
         을 확인했으며 이에 동의합니다
       </label>

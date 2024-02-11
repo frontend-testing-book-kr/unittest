@@ -38,11 +38,11 @@ describe("수치 검증", () => {
     expect(value).toBeLessThan(5); // 4 < 5
     expect(value).toBeLessThanOrEqual(4); // 4 <= 4
   });
-  test("소수계산은 정확하지 않다", () => {
+  test("소수 계산은 정확하지 않다", () => {
     expect(0.1 + 0.2).not.toBe(0.3);
   });
-  test("소수계산시 지정한 자릿수까지 비교한다", () => {
-    expect(0.1 + 0.2).toBeCloseTo(0.3); // 두 번째 인자의 기본값은 2다
+  test("소수 계산 시 지정한 자릿수까지 비교한다", () => {
+    expect(0.1 + 0.2).toBeCloseTo(0.3); // 두 번째 인수의 기본값은 2다.
     expect(0.1 + 0.2).toBeCloseTo(0.3, 15);
     expect(0.1 + 0.2).not.toBeCloseTo(0.3, 16);
   });
@@ -82,7 +82,7 @@ describe("문자열 검증", () => {
 });
 
 describe("배열 검증", () => {
-  describe("원시타입의 값들로 구성된 배열", () => {
+  describe("원시형 값들로 구성된 배열", () => {
     const tags = ["Jest", "Storybook", "Playwright", "React", "Next.js"];
     test("toContain", () => {
       expect(tags).toContain("Jest");

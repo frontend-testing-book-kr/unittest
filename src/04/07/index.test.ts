@@ -1,6 +1,6 @@
 import { greetByTime } from ".";
 
-/* 리스트 4-41
+/* 코드 4-41
 describe("설정 및 파기 타이밍", () => {
   beforeAll(() => console.log("1 - beforeAll"));
   afterAll(() => console.log("1 - afterAll"));
@@ -52,8 +52,8 @@ describe("greetByTime(", () => {
     expect(greetByTime()).toBe("식사는 하셨나요");
   });
 
-  test("저녁에는 '좋은 밤되세요'를 반환한다", () => {
+  test("저녁에는 '좋은 밤 되세요'를 반환한다", () => {
     jest.setSystemTime(new Date(2023, 4, 23, 21, 0, 0));
-    expect(greetByTime()).toBe("좋은 밤되세요");
+    expect(greetByTime()).toBe("좋은 밤 되세요");
   });
 });

@@ -102,7 +102,7 @@ describe("이전 배송지가 있는 경우", () => {
     ).toBeDisabled();
   });
 
-  test("'아니오'를 선택하고 제출하면 입력내용을 전달받는다", async () => {
+  test("'아니오'를 선택하고 제출하면 입력 내용을 전달받는다", async () => {
     const [mockFn, onSubmit] = mockHandleSubmit();
     render(<Form deliveryAddresses={deliveryAddresses} onSubmit={onSubmit} />);
     await user.click(screen.getByLabelText("아니오"));
@@ -114,7 +114,7 @@ describe("이전 배송지가 있는 경우", () => {
     expect(mockFn).toHaveBeenCalledWith(expect.objectContaining(inputValues));
   });
 
-  test("'네'를 선택하고 제출하면 입력내용을 전달받는다", async () => {
+  test("'네'를 선택하고 제출하면 입력 내용을 전달받는다", async () => {
     const [mockFn, onSubmit] = mockHandleSubmit();
     render(<Form deliveryAddresses={deliveryAddresses} onSubmit={onSubmit} />);
     await user.click(screen.getByLabelText("네"));

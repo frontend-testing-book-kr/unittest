@@ -4,7 +4,7 @@ import { postMyAddress } from "./fetchers";
 import { handleSubmit } from "./handleSubmit";
 import { checkPhoneNumber, ValidationError } from "./validations";
 
-/* 리스트 5-46
+/* 코드 5-46
 <Form
   onSubmit={handleSubmit((values) => {
     try {
@@ -30,7 +30,7 @@ export const RegisterAddress = () => {
             checkPhoneNumber(values.phoneNumber);
             postMyAddress(values)
               .then(() => {
-                setPostResult("등록되었습니다");
+                setPostResult("등록됐습니다");
               })
               .catch(() => {
                 setPostResult("등록에 실패했습니다");

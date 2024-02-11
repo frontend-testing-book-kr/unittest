@@ -4,10 +4,10 @@ exports[`Snapshot: 개별 아이템을 표시한다 1`] = `
 <div>
   <li>
     <h3>
-      TypeScript를 사용한 테스트 작성법
+      타입스크립트를 사용한 테스트 작성법
     </h3>
     <p>
-      테스트 작성시 TypeScript를 사용하면 테스트의 유지보수가 쉬워진다
+      테스트 작성 시 타입스크립트를 사용하면 테스트의 유지 보수가 쉬워진다
     </p>
     <a
       href="/articles/howto-testing-with-typescript"

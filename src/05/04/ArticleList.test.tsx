@@ -2,7 +2,7 @@ import { render, screen, within } from "@testing-library/react";
 import { ArticleList } from "./ArticleList";
 import { items } from "./fixture";
 
-/* 리스트 5-13
+/* 코드 5-13
 test("목록을 표시한다", () => {
   render(<ArticleList items={items} />);
   const list = screen.getByRole("list");
@@ -28,15 +28,15 @@ test("items의 수만큼 목록을 표시한다", () => {
 });
 
 test("목록에 표시할 데이터가 없으면 '게재된 기사가 없습니다'를 표시한다", () => {
-  // 빈 배열을 items에 할당하여 목록에 표시할 데이터가 없는 상황을 재현한다
+  // 빈 배열을 items에 할당하여 목록에 표시할 데이터가 없는 상황을 재현한다.
   render(<ArticleList items={[]} />);
-  // 존재하지 않을 것으로 예상하는 요소의 취득을 시도한다
+  // 존재하지 않을 것으로 예상하는 요소의 취득을 시도한다.
   const list = screen.queryByRole("list");
-  // list가 존재하지 않는다
+  // list가 존재하지 않는다.
   expect(list).not.toBeInTheDocument();
-  // list가 null이다
+  // list가 null이다.
   expect(list).toBeNull();
-  // '게재된 기사가 없습니다'가 표시되었는지 확인한다
+  // '게재된 기사가 없습니다'가 표시됐는지 확인한다.
   expect(screen.getByText("게재된 기사가 없습니다")).toBeInTheDocument();
 });
 

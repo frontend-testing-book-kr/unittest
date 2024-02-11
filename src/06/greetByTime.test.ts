@@ -18,8 +18,8 @@ describe("greetByTime(", () => {
     expect(greetByTime()).toBe("식사는 하셨나요");
   });
   // (3) '좋은 밤되세요'를 반환하는 함수
-  xtest("저녁에는 '좋은 밤되세요'를 반환한다", () => {
+  xtest("저녁에는 '좋은 밤 되세요'를 반환한다", () => {
     jest.setSystemTime(new Date(2023, 4, 23, 21, 0, 0));
-    expect(greetByTime()).toBe("좋은 밤되세요");
+    expect(greetByTime()).toBe("좋은 밤 되세요");
   });
 });

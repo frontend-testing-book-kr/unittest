@@ -5,7 +5,7 @@ import { InputAccount } from "./InputAccount";
 // 테스트 파일 작성 초기에 설정
 const user = userEvent.setup();
 
-/* 리스트 5-24
+/* 코드 5-24
 test("비밀번호 입력란", async () => {
   render(<InputAccount />);
   const textbox = screen.getByRole("textbox", { name: "비밀번호" });
@@ -27,7 +27,7 @@ test("메일주소 입력란", async () => {
   const value = "taro.tanaka@example.com";
   // textbox에 value를 입력
   await user.type(textbox, value);
-  // 초기값이 입력되어 있는 폼 요소가 존재하는지 검증
+  // 초깃값이 입력된 폼 요소가 존재하는지 검증
   expect(screen.getByDisplayValue(value)).toBeInTheDocument();
 });
 

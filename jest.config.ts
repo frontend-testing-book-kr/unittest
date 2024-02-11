@@ -1,10 +1,10 @@
-/* 리스트 5-1
+/* 코드 5-1
 module.exports = {
   testEnvironment: "jest-environment-jsdom",
 };
 */
 
-/* 리스트 6-1
+/* 코드 6-1
 export default {
   // 생략
   collectCoverage: true,
@@ -12,7 +12,7 @@ export default {
 };
 */
 
-/* 리스트 6-7
+/* 코드 6-7
 export default {
   // 생략
   reporters: [

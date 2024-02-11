@@ -32,7 +32,7 @@ beforeEach(() => {
   jest.resetAllMocks();
 });
 
-/* 리스트 5-49
+/* 코드 5-49
 test("유효성 검사 에러가 발생하면 메시지가 표시된다", async () => {
   render(<RegisterAddress />);
   await fillInvalidValuesAndSubmit();
@@ -40,7 +40,7 @@ test("유효성 검사 에러가 발생하면 메시지가 표시된다", async 
 });
 */
 
-/* 리스트 5-50
+/* 코드 5-50
 test("원인이 명확하지 않은 에러가 발생하면 메시지가 표시된다", async () => {
   render(<RegisterAddress />);
   await fillValuesAndSubmit();
@@ -48,12 +48,12 @@ test("원인이 명확하지 않은 에러가 발생하면 메시지가 표시�
 });
 */
 
-test("성공하면 '등록되었습니다'가 표시된다", async () => {
+test("성공하면 '등록됐습니다'가 표시된다", async () => {
   const mockFn = mockPostMyAddress();
   render(<RegisterAddress />);
   const submitValues = await fillValuesAndSubmit();
   expect(mockFn).toHaveBeenCalledWith(expect.objectContaining(submitValues));
-  expect(screen.getByText("등록되었습니다")).toBeInTheDocument();
+  expect(screen.getByText("등록됐습니다")).toBeInTheDocument();
 });
 
 test("실패하면 '등록에 실패했습니다'가 표시된다", async () => {
@@ -84,3 +84,14 @@ test("Snapshot: 등록 폼이 표시된다", async () => {
   // expect(mockFn).toHaveBeenCalledWith(expect.objectContaining(submitValues));
   expect(container).toMatchSnapshot();
 });
+
+/* 코드 5-55
+test("Snapshot: 등록 폼이 표시된다", async () => {
+  // mockPostMyAddress();
+  const mockFn = mockPostMyAddress();
+  const { container } = render(<RegisterAddress />);
+  const submitValues = await fillValuesAndSubmit();
+  expect(mockFn).toHaveBeenCalledWith(expect.objectContaining(submitValues));
+  expect(container).toMatchSnapshot();
+});
+*/

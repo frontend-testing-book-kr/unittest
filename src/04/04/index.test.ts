@@ -27,11 +27,11 @@ test("지정한 태그를 포함한 기사가 한 건 이상 있으면 링크 �
   expect(data).toMatchObject([
     {
       link: "/articles/howto-testing-with-typescript",
-      title: "TypeScript를 사용한 테스트 작성법",
+      title: "타입스크립트를 사용한 테스트 작성법",
     },
     {
       link: "/articles/react-component-testing-with-jest",
-      title: "Jest로 시작하는 React 컴포넌트 테스트",
+      title: "제스트로 시작하는 리액트 컴포넌트 테스트",
     },
   ]);
 });

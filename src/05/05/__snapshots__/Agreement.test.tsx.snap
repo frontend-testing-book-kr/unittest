@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: 이용계약 동의가 표시되어 있다 1`] = `
+exports[`Snapshot: 이용 약관 동의가 표시되어 있다 1`] = `
 <div>
   <fieldset>
     <legend>
-      이용계약 동의
+      이용 약관 동의
     </legend>
     <label>
       <input
@@ -14,7 +14,7 @@ exports[`Snapshot: 이용계약 동의가 표시되어 있다 1`] = `
       <a
         href="/terms"
       >
-        이용계약
+        이용 약관
       </a>
       을 확인했으며 이에 동의합니다
     </label>

@@ -5,5 +5,5 @@ export function greetByTime() {
   } else if (hour < 18) {
     return "식사는 하셨나요";
   }
-  return "좋은 밤되세요";
+  return "좋은 밤 되세요";
 }

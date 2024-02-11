@@ -1,23 +1,30 @@
 import { fireEvent, logRoles, render, screen } from "@testing-library/react";
 import { Form } from "./Form";
 
-/* 리스트 5-3
+/* 코드 5-3
 test("이름을 표시한다", () => {
   render(<Form name="taro" />);
 });
 */
 
-/* 리스트 5-4
+/* 코드 5-4
 test("이름을 표시한다", () => {
   render(<Form name="taro" />);
   console.log(screen.getByText("taro"));
 });
 */
 
-/* 리스트 5-7
+/* 코드 5-7
 test("heading을 표시한다", () => {
   render(<Form name="taro" />);
   expect(screen.getByRole("heading"));
+});
+*/
+
+/* 코드 5-53
+test("Snapshot: 계정명인 'taro'가 표시됐는지 확인한다", () => {
+  const { container } = render(<Form name="jiro" />);
+  expect(container).toMatchSnapshot();
 });
 */
 

@@ -20,7 +20,7 @@ test("주요 영역이 표시되어 있다", () => {
     screen.getByRole("group", { name: "계정정보 입력" })
   ).toBeInTheDocument();
   expect(
-    screen.getByRole("group", { name: "이용계약 동의" })
+    screen.getByRole("group", { name: "이용 약관 동의" })
   ).toBeInTheDocument();
   expect(
     screen.getByRole("button", { name: "회원가입" })
@@ -32,7 +32,7 @@ test("회원가입 버튼은 비활성화 상태다", () => {
   expect(screen.getByRole("button", { name: "회원가입" })).toBeDisabled();
 });
 
-test("이용계약에 동의하는 체크박스를 클릭하면 회원가입 버튼은 활성화된다", async () => {
+test("이용 약관에 동의하는 체크 박스를 클릭하면 회원가입 버튼은 활성화된다", async () => {
   render(<Form />);
   await user.click(screen.getByRole("checkbox"));
   expect(screen.getByRole("button", { name: "회원가입" })).toBeEnabled();

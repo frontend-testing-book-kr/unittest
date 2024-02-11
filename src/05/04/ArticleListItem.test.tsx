@@ -3,8 +3,8 @@ import { ArticleListItem, ItemProps } from "./ArticleListItem";
 
 const item: ItemProps = {
   id: "howto-testing-with-typescript",
-  title: "TypeScript를 사용한 테스트 작성법",
-  body: "테스트 작성시 TypeScript를 사용하면 테스트의 유지보수가 쉬워진다",
+  title: "타입스크립트를 사용한 테스트 작성법",
+  body: "테스트 작성 시 타입스크립트를 사용하면 테스트의 유지 보수가 쉬워진다",
 };
 
 test("링크에 id로 만든 URL을 표시한다", () => {
