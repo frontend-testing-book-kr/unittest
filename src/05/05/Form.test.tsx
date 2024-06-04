@@ -4,7 +4,7 @@ import { Form } from "./Form";
 
 const user = userEvent.setup();
 
-test("form의 접근 가능한 이름은 heading에서 인용한다", () => {
+test("form의 접근 가능한 이름은 heading에서 인용합니다", () => {
   render(<Form />);
   expect(
     screen.getByRole("form", { name: "신규 계정 등록" })

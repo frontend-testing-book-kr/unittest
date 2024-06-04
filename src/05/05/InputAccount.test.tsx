@@ -13,7 +13,7 @@ test("비밀번호 입력란", async () => {
 });
 */
 
-test("fieldset의 접근 가능한 이름을 legend에서 인용한다", () => {
+test("fieldset의 접근 가능한 이름을 legend에서 인용합니다", () => {
   render(<InputAccount />);
   expect(
     screen.getByRole("group", { name: "계정정보 입력" })

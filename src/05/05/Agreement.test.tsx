@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { Agreement } from "./Agreement";
 
-test("fieldset의 접근 가능한 이름을 legend에서 인용한다", () => {
+test("fieldset의 접근 가능한 이름을 legend에서 인용합니다", () => {
   render(<Agreement />);
   expect(
     screen.getByRole("group", { name: "이용 약관 동의" })
